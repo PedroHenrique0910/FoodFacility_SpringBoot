@@ -1,0 +1,107 @@
+@font-face {
+    font-family: 'Potato Sans';
+    src: url('fonts/Potato_sans-Bold.otf') format('opentype');
+}
+
+@font-face {
+    font-family:'Bonoco2023';
+    src: url('fonts/Bonoco2023.ttf') format('truetype');
+}
+
+body {
+    background-color: #000000;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: #3498db;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #f1c40f;
+    font-size: 85px;
+    margin-bottom: 20px;
+    font-family: "Potato Sans";
+}
+h2 {
+    text-align: center;
+    font-size: 30px;
+    font-family: "Comic Sans MS";
+    color: #f1c40f;
+}
+
+form {
+    margin-top: 20px;
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-family: Bonoco2023;
+    font-size: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #0343e8;
+    color: #f2f2f2;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: "Microsoft YaHei UI"
+}
+
+button:hover {
+    background-color: #000000;
+}
+
+.hidden {
+    display: none;
+}
+
+#foodTrucks {
+    margin-top: 30px;
+    color: #dddddd;
+}
+
+#foodTruckList {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+#foodTruckList li {
+    margin-bottom: 20px;
+    border: 5px solid #ddd;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+#foodTruckList p {
+    margin: 0;
+    font-family: Bonoco2023;
+    text-align: justify;
+}
+
+#foodTruckList li strong {
+    display: block;
+    margin-bottom: 3px;
+    color: #000000;
+    font-family: "Potato Sans";
+    font-size: 20px;
+}

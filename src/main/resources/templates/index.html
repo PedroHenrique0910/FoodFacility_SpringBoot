@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Food Facility</title>
+</head>
+<body>
+
+
+
+<div class="container">
+    <h1><i>Food Facility</i></h1>
+    <form action="/findFoodTrucks" method="get">
+        <label for="latitude">Latitude:</label>
+        <input type="text" id="latitude" name="latitude" required>
+
+        <label for="longitude">Longitude:</label>
+        <input type="text" id="longitude" name="longitude" required>
+
+        <button type="submit">Encontrar Food Trucks</button>
+    </form>
+
+    <!-- Verifica se há food trucks na lista e exibe -->
+    <div id="foodTrucks" th:if="${not #lists.isEmpty(foodTrucks)}">
+        <h2> Food Trucks: </h2>
+        <ul id="foodTruckList">
+            <!-- Use Thymeleaf para iterar sobre a lista de food trucks -->
+            <li th:each="foodTruck : ${foodTrucks}">
+                <p>
+                    <strong>Restaurante:</strong> <span th:text="${foodTruck.getNome()}"></span><br><br>
+                    <strong>Endereco:</strong> <span th:text="${foodTruck.getEndereco()}"></span><br><br>
+                    <strong>Tipo Cardapio:</strong> <span th:text="${foodTruck.getTipoCardapio()}"></span><br><br>
+                    <strong>Distancia:</strong> <span th:text="${foodTruck.toString()}"></span><br><br>
+                </p>
+            </li>
+        </ul>
+    </div>
+</div>
+
+</body>
+</html>
